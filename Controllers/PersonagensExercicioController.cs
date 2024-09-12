@@ -63,7 +63,7 @@ namespace RpgApi.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("PostValidacao")]
 
         public IActionResult PostValidacao(Personagem novoPersonagem)
         {
