@@ -48,10 +48,12 @@ namespace RpgApi.Controllers
             return Ok(listaBusca);
         }
 
+
         [HttpGet("GetClerigoMago")]
         public IActionResult GetClerigoMago()
         {
             List<Personagem> listaClerigoMago = (personagens.FindAll(p => p.Classe != ClasseEnum.Cavaleiro)).OrderByDescending(p => p.PontosVida).ToList();
+
             return Ok(listaClerigoMago);
         }
 
@@ -96,11 +98,13 @@ namespace RpgApi.Controllers
             return Ok(listaBusca);
         }
 
+    
+    
 
 
 
 
-
+    }
 
 }     
- }
+ 
