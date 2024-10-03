@@ -30,11 +30,9 @@ namespace RpgApi.Controllers
         {
             try
             {
-
                 Personagem p = await _context.TB_PERSONAGENS.FirstOrDefaultAsync(pBusca => pBusca.Id == id);
 
                 return Ok(p);
-
             }
             catch (System.Exception ex)
             {
@@ -80,17 +78,20 @@ namespace RpgApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
+
         }
 
         [HttpPut]
 
-        public async Task<IActionResult> Update(Personagem novoPersonagem){
+        public async Task<IActionResult> Update(Personagem novoPersonagem)
+        {
 
 
-            try{
+            try
+            {
 
-                if(novoPersonagem.PontosVida > 100){
+                if (novoPersonagem.PontosVida > 100)
+                {
 
                     throw new SystemException("Pontos de vida não podem ser maior que 100");
                 }
@@ -100,7 +101,8 @@ namespace RpgApi.Controllers
 
                 return Ok(linhasAfetadas);
             }
-            catch(System.Exception ex){
+            catch (System.Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
 

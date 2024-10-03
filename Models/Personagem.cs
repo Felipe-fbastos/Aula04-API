@@ -10,8 +10,8 @@ namespace RpgApi.Models
     public class Personagem
     {
 
-       
-                public int Id { get; set; }
+
+        public int Id { get; set; }
         public string Nome { get; set; } = string.Empty;
         public int PontosVida { get; set; }
         public int Forca { get; set; }
@@ -34,10 +34,11 @@ namespace RpgApi.Models
 
         public int Derrotas { get; set; }
 
+        public List<PersonagemHabilidade> PersonagemHabilidades { get; set; } = [];
 
 
 
-        
+
 
     }
 }
