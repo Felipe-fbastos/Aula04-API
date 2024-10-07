@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -86,6 +87,11 @@ namespace RpgApi.Controllers
                 }
                 else
                 {
+
+                    usuario.DataAcesso = DateTime.Now;
+
+                    await _context.SaveChangesAsync();
+
                     return Ok(usuario);
                 }
             }
@@ -95,6 +101,53 @@ namespace RpgApi.Controllers
             }
 
         }
+
+
+        [HttpPut("AlterarSenha")]
+
+        public async Task<IActionResult> AlterarSenha(Usuario Password)
+        {
+            
+
+            Usuario usuario = new Usuario();
+
+            usuario.PasswordString = Password.ToString();
+
+            Criptografia.CriarPasswordHash(usuario.PasswordString, out byte[] hash, out byte[] salt);
+
+            usuario.PasswordHash = hash;
+            usuario.PasswordSalt = salt;
+
+
+            await _context.TB_USUARIOS.AddAsync(usuario);
+            await _context.SaveChangesAsync();
+
+            return Ok(usuario.Id);
+
+
+        }
+
+        [HttpGet("ExibirTodosUsuario")]
+
+        public async Task<IActionResult> ExibirTodosUsuario()
+        {
+
+            try
+            {
+
+                List<Usuario> lista = await _context.TB_USUARIOS.ToListAsync();
+                return Ok(lista);
+
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
     }
 }
 

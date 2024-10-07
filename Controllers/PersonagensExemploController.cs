@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RpgApi.Data;
 using RpgApi.Models;
 using RpgApi.Models.Enuns;
 
@@ -33,6 +35,14 @@ namespace RpgApi.Controllers
 
        };
 
+      private readonly DataContext _context;
+
+      public PersonagensExemploController(DataContext context)
+      {
+
+         _context = context;
+      }
+
       [HttpGet("Get")]
       public IActionResult GetFirst()
       {
@@ -47,12 +57,24 @@ namespace RpgApi.Controllers
          return Ok(personagens);
       }
 
+
       [HttpGet("{id}")]
       public IActionResult GetSingle(int id)
       {
+         if (id == null)
+         {
+            return NotFound("Não encontrado");
+         }
 
-         return Ok(personagens.FirstOrDefault(pe => pe.Id == id));
-      }
+        else{
+
+         return Ok(_context.TB_PERSONAGENS
+        .Include(p => p.Usuario) // Inclui o usuário associado
+         .FirstOrDefault(pe => pe.Id == id));
+
+        }
+
+          }
 
       [HttpPost]
       public IActionResult AddPersonagem(Personagem novoPersonagem)
@@ -93,7 +115,6 @@ namespace RpgApi.Controllers
          return Ok(listaBusca);
       }
 
-      
 
 
 
@@ -101,6 +122,7 @@ namespace RpgApi.Controllers
 
 
 
-    
+
+
    }
 }
