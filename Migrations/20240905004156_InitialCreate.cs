@@ -18,7 +18,7 @@ namespace RpgApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "VarChar(200)", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     PontosVida = table.Column<int>(type: "int", nullable: false),
                     Forca = table.Column<int>(type: "int", nullable: false),
                     Defesa = table.Column<int>(type: "int", nullable: false),

@@ -12,7 +12,7 @@ using RpgApi.Data;
 namespace RpgApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240926013602_MigracaoUmParaUm")]
+    [Migration("20240926013543_MigracaoUmParaUm")]
     partial class MigracaoUmParaUm
     {
         /// <inheritdoc />
@@ -39,7 +39,7 @@ namespace RpgApi.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("PersonagemId")
                         .HasColumnType("int");
@@ -135,7 +135,7 @@ namespace RpgApi.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("PontosVida")
                         .HasColumnType("int");
@@ -143,7 +143,7 @@ namespace RpgApi.Migrations
                     b.Property<int?>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Vitorias")
+                    b.Property<int>("Vitórias")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -165,7 +165,7 @@ namespace RpgApi.Migrations
                             Nome = "Frodo",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -179,7 +179,7 @@ namespace RpgApi.Migrations
                             Nome = "Sam",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -193,7 +193,7 @@ namespace RpgApi.Migrations
                             Nome = "Galadriel",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -207,7 +207,7 @@ namespace RpgApi.Migrations
                             Nome = "Gandalf",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -221,7 +221,7 @@ namespace RpgApi.Migrations
                             Nome = "Hobbit",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -235,7 +235,7 @@ namespace RpgApi.Migrations
                             Nome = "Celeborn",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -249,7 +249,7 @@ namespace RpgApi.Migrations
                             Nome = "Radagast",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         });
                 });
 
@@ -266,7 +266,7 @@ namespace RpgApi.Migrations
 
                     b.Property<string>("Email")
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<byte[]>("Foto")
                         .HasColumnType("varbinary(max)");
@@ -287,13 +287,13 @@ namespace RpgApi.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar")
+                        .HasColumnType("varchar")
                         .HasDefaultValue("Jogador");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -306,8 +306,8 @@ namespace RpgApi.Migrations
                             Email = "seuEmail@gmail.com",
                             Latitude = -23.520024100000001,
                             Longitude = -46.596497999999997,
-                            PasswordHash = new byte[] { 22, 221, 84, 94, 95, 54, 83, 53, 51, 50, 62, 58, 236, 206, 9, 59, 46, 43, 27, 253, 212, 152, 52, 31, 73, 223, 178, 224, 78, 122, 5, 2, 84, 16, 208, 154, 237, 246, 134, 133, 81, 64, 105, 135, 231, 128, 190, 81, 72, 138, 21, 133, 101, 179, 220, 245, 39, 172, 8, 190, 214, 39, 147, 23 },
-                            PasswordSalt = new byte[] { 177, 80, 246, 231, 141, 204, 201, 131, 198, 159, 237, 62, 59, 109, 24, 232, 165, 135, 170, 27, 138, 42, 203, 146, 142, 141, 89, 182, 200, 78, 25, 232, 64, 227, 206, 245, 123, 11, 196, 186, 7, 215, 185, 186, 93, 196, 224, 93, 200, 61, 158, 78, 142, 197, 49, 222, 38, 32, 2, 242, 185, 241, 12, 191, 54, 225, 171, 138, 147, 173, 135, 219, 2, 232, 24, 16, 91, 117, 169, 11, 121, 120, 84, 199, 57, 33, 124, 142, 78, 157, 66, 26, 202, 106, 8, 183, 32, 47, 68, 41, 44, 0, 186, 117, 92, 61, 29, 32, 23, 171, 224, 104, 242, 202, 168, 3, 250, 190, 204, 80, 13, 26, 198, 204, 27, 210, 182, 22 },
+                            PasswordHash = new byte[] { 204, 164, 143, 245, 211, 185, 186, 251, 212, 163, 156, 161, 118, 93, 235, 158, 120, 118, 225, 206, 25, 110, 7, 196, 65, 177, 155, 47, 77, 49, 201, 219, 185, 163, 239, 63, 195, 128, 245, 57, 53, 28, 159, 193, 94, 111, 147, 214, 154, 206, 113, 112, 11, 229, 243, 143, 246, 88, 120, 171, 248, 7, 18, 94 },
+                            PasswordSalt = new byte[] { 150, 49, 181, 149, 232, 180, 100, 184, 86, 218, 53, 25, 248, 57, 240, 9, 154, 50, 118, 147, 122, 102, 227, 32, 122, 90, 9, 227, 26, 42, 89, 50, 191, 82, 219, 217, 217, 95, 105, 200, 134, 233, 67, 119, 159, 46, 195, 119, 138, 123, 123, 236, 80, 132, 234, 80, 12, 216, 137, 204, 172, 177, 161, 190, 63, 102, 64, 187, 100, 18, 40, 113, 179, 100, 141, 255, 24, 230, 76, 161, 152, 90, 89, 14, 100, 225, 247, 208, 10, 15, 60, 185, 164, 135, 145, 204, 93, 239, 72, 141, 41, 237, 135, 223, 159, 65, 92, 32, 221, 205, 75, 50, 91, 174, 83, 119, 106, 168, 89, 49, 127, 131, 250, 25, 236, 18, 76, 27 },
                             Perfil = "Admin",
                             Username = "UsuarioAdmin"
                         });

@@ -25,7 +25,7 @@ namespace RpgApi.Migrations
                 defaultValue: 0);
 
             migrationBuilder.AddColumn<int>(
-                name: "Vitorias",
+                name: "Vitórias",
                 table: "TB_PERSONAGENS",
                 type: "int",
                 nullable: false,
@@ -91,49 +91,49 @@ namespace RpgApi.Migrations
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 1,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 2,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 3,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 4,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 5,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 6,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
                 table: "TB_PERSONAGENS",
                 keyColumn: "Id",
                 keyValue: 7,
-                columns: new[] { "Derrotas", "Disputas", "Vitorias" },
+                columns: new[] { "Derrotas", "Disputas", "Vitórias" },
                 values: new object[] { 0, 0, 0 });
 
             migrationBuilder.UpdateData(
@@ -141,7 +141,7 @@ namespace RpgApi.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "PasswordHash", "PasswordSalt" },
-                values: new object[] { new byte[] { 22, 221, 84, 94, 95, 54, 83, 53, 51, 50, 62, 58, 236, 206, 9, 59, 46, 43, 27, 253, 212, 152, 52, 31, 73, 223, 178, 224, 78, 122, 5, 2, 84, 16, 208, 154, 237, 246, 134, 133, 81, 64, 105, 135, 231, 128, 190, 81, 72, 138, 21, 133, 101, 179, 220, 245, 39, 172, 8, 190, 214, 39, 147, 23 }, new byte[] { 177, 80, 246, 231, 141, 204, 201, 131, 198, 159, 237, 62, 59, 109, 24, 232, 165, 135, 170, 27, 138, 42, 203, 146, 142, 141, 89, 182, 200, 78, 25, 232, 64, 227, 206, 245, 123, 11, 196, 186, 7, 215, 185, 186, 93, 196, 224, 93, 200, 61, 158, 78, 142, 197, 49, 222, 38, 32, 2, 242, 185, 241, 12, 191, 54, 225, 171, 138, 147, 173, 135, 219, 2, 232, 24, 16, 91, 117, 169, 11, 121, 120, 84, 199, 57, 33, 124, 142, 78, 157, 66, 26, 202, 106, 8, 183, 32, 47, 68, 41, 44, 0, 186, 117, 92, 61, 29, 32, 23, 171, 224, 104, 242, 202, 168, 3, 250, 190, 204, 80, 13, 26, 198, 204, 27, 210, 182, 22 } });
+                values: new object[] { new byte[] { 204, 164, 143, 245, 211, 185, 186, 251, 212, 163, 156, 161, 118, 93, 235, 158, 120, 118, 225, 206, 25, 110, 7, 196, 65, 177, 155, 47, 77, 49, 201, 219, 185, 163, 239, 63, 195, 128, 245, 57, 53, 28, 159, 193, 94, 111, 147, 214, 154, 206, 113, 112, 11, 229, 243, 143, 246, 88, 120, 171, 248, 7, 18, 94 }, new byte[] { 150, 49, 181, 149, 232, 180, 100, 184, 86, 218, 53, 25, 248, 57, 240, 9, 154, 50, 118, 147, 122, 102, 227, 32, 122, 90, 9, 227, 26, 42, 89, 50, 191, 82, 219, 217, 217, 95, 105, 200, 134, 233, 67, 119, 159, 46, 195, 119, 138, 123, 123, 236, 80, 132, 234, 80, 12, 216, 137, 204, 172, 177, 161, 190, 63, 102, 64, 187, 100, 18, 40, 113, 179, 100, 141, 255, 24, 230, 76, 161, 152, 90, 89, 14, 100, 225, 247, 208, 10, 15, 60, 185, 164, 135, 145, 204, 93, 239, 72, 141, 41, 237, 135, 223, 159, 65, 92, 32, 221, 205, 75, 50, 91, 174, 83, 119, 106, 168, 89, 49, 127, 131, 250, 25, 236, 18, 76, 27 } });
 
             migrationBuilder.CreateIndex(
                 name: "IX_TB_ARMAS_PersonagemId",
@@ -178,7 +178,7 @@ namespace RpgApi.Migrations
                 table: "TB_PERSONAGENS");
 
             migrationBuilder.DropColumn(
-                name: "Vitorias",
+                name: "Vitórias",
                 table: "TB_PERSONAGENS");
 
             migrationBuilder.DropColumn(
@@ -190,7 +190,7 @@ namespace RpgApi.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "PasswordHash", "PasswordSalt" },
-                values: new object[] { new byte[] { 29, 176, 165, 111, 153, 221, 222, 12, 132, 24, 127, 115, 63, 102, 127, 173, 106, 230, 12, 107, 29, 253, 195, 160, 101, 245, 251, 126, 95, 240, 168, 152, 226, 247, 135, 204, 185, 72, 183, 59, 153, 196, 42, 225, 4, 41, 163, 33, 56, 63, 220, 176, 240, 253, 159, 49, 139, 84, 186, 14, 120, 219, 59, 39 }, new byte[] { 180, 106, 23, 30, 208, 244, 245, 61, 92, 29, 132, 34, 253, 100, 242, 190, 31, 40, 155, 1, 249, 103, 84, 26, 216, 118, 164, 62, 104, 4, 41, 94, 227, 241, 118, 219, 152, 200, 252, 205, 58, 135, 36, 236, 213, 231, 226, 231, 254, 45, 31, 110, 201, 143, 221, 23, 135, 162, 18, 61, 168, 18, 252, 21, 91, 245, 57, 24, 142, 18, 148, 46, 83, 58, 110, 98, 252, 180, 226, 255, 181, 21, 142, 156, 92, 110, 174, 17, 82, 160, 11, 240, 225, 250, 37, 99, 10, 38, 80, 218, 11, 5, 227, 93, 162, 82, 143, 117, 181, 27, 66, 253, 13, 106, 181, 155, 52, 253, 96, 50, 246, 3, 75, 57, 135, 26, 101, 127 } });
+                values: new object[] { new byte[] { 172, 133, 29, 211, 236, 230, 157, 97, 253, 154, 191, 239, 204, 61, 76, 127, 126, 80, 2, 246, 70, 38, 186, 109, 145, 233, 59, 215, 178, 60, 11, 219, 77, 17, 108, 137, 189, 119, 176, 177, 191, 165, 77, 119, 247, 74, 212, 81, 88, 178, 107, 227, 89, 113, 181, 67, 93, 4, 43, 125, 28, 164, 74, 122 }, new byte[] { 204, 207, 33, 237, 73, 88, 179, 118, 251, 254, 57, 184, 188, 42, 149, 131, 93, 1, 81, 132, 26, 12, 14, 186, 22, 115, 197, 168, 188, 51, 248, 0, 183, 136, 27, 40, 143, 149, 156, 135, 177, 77, 175, 126, 185, 140, 231, 53, 54, 17, 34, 181, 153, 27, 208, 224, 26, 16, 15, 64, 85, 244, 11, 44, 86, 192, 176, 136, 62, 96, 218, 34, 227, 169, 49, 118, 81, 136, 43, 60, 51, 44, 53, 252, 22, 1, 253, 43, 124, 70, 36, 12, 100, 26, 149, 145, 0, 235, 189, 112, 246, 255, 244, 83, 47, 42, 249, 62, 194, 177, 136, 34, 224, 102, 121, 121, 12, 2, 229, 208, 72, 195, 173, 117, 29, 200, 157, 143 } });
         }
     }
 }

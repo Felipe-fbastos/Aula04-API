@@ -22,7 +22,7 @@ namespace RpgApi.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> AddPersonagemHabilidadeAsync(PersonagemHabilidade novoPersonagemHabilidade)
+        /*public async Task<IActionResult> AddPersonagemHabilidadeAsync(PersonagemHabilidade novoPersonagemHabilidade)
         {
 
             try
@@ -59,8 +59,8 @@ namespace RpgApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-        }
-        [HttpGet("{id}")]
+        }*/
+        /*[HttpGet("{id}")]
         public async Task<List<PersonagemHabilidade>> ConsultarPersonagemHabilidade(int id)
         {
 
@@ -68,7 +68,7 @@ namespace RpgApi.Controllers
 
             return personagem;
 
-        }
+        }*/
 
         [HttpGet("GetHabilidades")]
 
@@ -90,8 +90,7 @@ namespace RpgApi.Controllers
 
         }
 
-        [HttpPost("DeletePersonagemHabilidade")]
-
+        /*[HttpPost("DeletePersonagemHabilidade")]
         public async Task<IActionResult> DeletarPersonagemHabilidade(PersonagemHabilidade ph)
         {
 
@@ -109,7 +108,7 @@ namespace RpgApi.Controllers
             return Ok();
 
 
-        }
+        }*/
 
 
 

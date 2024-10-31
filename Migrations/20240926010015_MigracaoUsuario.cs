@@ -29,15 +29,15 @@ namespace RpgApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "VarChar(200)", maxLength: 200, nullable: false),
+                    Username = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     Foto = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     Latitude = table.Column<double>(type: "float", nullable: true),
                     Longitude = table.Column<double>(type: "float", nullable: true),
                     DataAcesso = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Perfil = table.Column<string>(type: "VarChar(200)", maxLength: 200, nullable: false, defaultValue: "Jogador"),
-                    Email = table.Column<string>(type: "VarChar(200)", maxLength: 200, nullable: true)
+                    Perfil = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false, defaultValue: "Jogador"),
+                    Email = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -96,7 +96,7 @@ namespace RpgApi.Migrations
             migrationBuilder.InsertData(
                 table: "TB_USUARIOS",
                 columns: new[] { "Id", "DataAcesso", "Email", "Foto", "Latitude", "Longitude", "PasswordHash", "PasswordSalt", "Perfil", "Username" },
-                values: new object[] { 1, null, "seuEmail@gmail.com", null, -23.520024100000001, -46.596497999999997, new byte[] { 29, 176, 165, 111, 153, 221, 222, 12, 132, 24, 127, 115, 63, 102, 127, 173, 106, 230, 12, 107, 29, 253, 195, 160, 101, 245, 251, 126, 95, 240, 168, 152, 226, 247, 135, 204, 185, 72, 183, 59, 153, 196, 42, 225, 4, 41, 163, 33, 56, 63, 220, 176, 240, 253, 159, 49, 139, 84, 186, 14, 120, 219, 59, 39 }, new byte[] { 180, 106, 23, 30, 208, 244, 245, 61, 92, 29, 132, 34, 253, 100, 242, 190, 31, 40, 155, 1, 249, 103, 84, 26, 216, 118, 164, 62, 104, 4, 41, 94, 227, 241, 118, 219, 152, 200, 252, 205, 58, 135, 36, 236, 213, 231, 226, 231, 254, 45, 31, 110, 201, 143, 221, 23, 135, 162, 18, 61, 168, 18, 252, 21, 91, 245, 57, 24, 142, 18, 148, 46, 83, 58, 110, 98, 252, 180, 226, 255, 181, 21, 142, 156, 92, 110, 174, 17, 82, 160, 11, 240, 225, 250, 37, 99, 10, 38, 80, 218, 11, 5, 227, 93, 162, 82, 143, 117, 181, 27, 66, 253, 13, 106, 181, 155, 52, 253, 96, 50, 246, 3, 75, 57, 135, 26, 101, 127 }, "Admin", "UsuarioAdmin" });
+                values: new object[] { 1, null, "seuEmail@gmail.com", null, -23.520024100000001, -46.596497999999997, new byte[] { 172, 133, 29, 211, 236, 230, 157, 97, 253, 154, 191, 239, 204, 61, 76, 127, 126, 80, 2, 246, 70, 38, 186, 109, 145, 233, 59, 215, 178, 60, 11, 219, 77, 17, 108, 137, 189, 119, 176, 177, 191, 165, 77, 119, 247, 74, 212, 81, 88, 178, 107, 227, 89, 113, 181, 67, 93, 4, 43, 125, 28, 164, 74, 122 }, new byte[] { 204, 207, 33, 237, 73, 88, 179, 118, 251, 254, 57, 184, 188, 42, 149, 131, 93, 1, 81, 132, 26, 12, 14, 186, 22, 115, 197, 168, 188, 51, 248, 0, 183, 136, 27, 40, 143, 149, 156, 135, 177, 77, 175, 126, 185, 140, 231, 53, 54, 17, 34, 181, 153, 27, 208, 224, 26, 16, 15, 64, 85, 244, 11, 44, 86, 192, 176, 136, 62, 96, 218, 34, 227, 169, 49, 118, 81, 136, 43, 60, 51, 44, 53, 252, 22, 1, 253, 43, 124, 70, 36, 12, 100, 26, 149, 145, 0, 235, 189, 112, 246, 255, 244, 83, 47, 42, 249, 62, 194, 177, 136, 34, 224, 102, 121, 121, 12, 2, 229, 208, 72, 195, 173, 117, 29, 200, 157, 143 }, "Admin", "UsuarioAdmin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_TB_PERSONAGENS_UsuarioId",

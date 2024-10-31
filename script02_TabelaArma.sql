@@ -3,7 +3,7 @@ GO
 
 CREATE TABLE [TB_ARMAS] (
     [Id] int NOT NULL IDENTITY,
-    [Nome] VarChar(200) NOT NULL,
+    [Nome] varchar(200) NOT NULL,
     [Dano] int NOT NULL,
     CONSTRAINT [PK_TB_ARMAS] PRIMARY KEY ([Id])
 );
@@ -24,7 +24,7 @@ IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Dano
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20240925231721_MigracaoArma', N'8.0.8');
+VALUES (N'20240925231643_MigracaoArma', N'8.0.8');
 GO
 
 COMMIT;

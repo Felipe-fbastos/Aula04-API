@@ -18,7 +18,7 @@ namespace RpgApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "VarChar(200)", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     Dano = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

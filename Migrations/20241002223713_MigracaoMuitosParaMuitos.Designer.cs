@@ -12,7 +12,7 @@ using RpgApi.Data;
 namespace RpgApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241002234904_MigracaoMuitosParaMuitos")]
+    [Migration("20241002223713_MigracaoMuitosParaMuitos")]
     partial class MigracaoMuitosParaMuitos
     {
         /// <inheritdoc />
@@ -39,7 +39,7 @@ namespace RpgApi.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("PersonagemId")
                         .HasColumnType("int");
@@ -117,7 +117,7 @@ namespace RpgApi.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -176,7 +176,7 @@ namespace RpgApi.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("PontosVida")
                         .HasColumnType("int");
@@ -184,7 +184,7 @@ namespace RpgApi.Migrations
                     b.Property<int?>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Vitorias")
+                    b.Property<int>("Vitórias")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -206,7 +206,7 @@ namespace RpgApi.Migrations
                             Nome = "Frodo",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -220,7 +220,7 @@ namespace RpgApi.Migrations
                             Nome = "Sam",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -234,7 +234,7 @@ namespace RpgApi.Migrations
                             Nome = "Galadriel",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -248,7 +248,7 @@ namespace RpgApi.Migrations
                             Nome = "Gandalf",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -262,7 +262,7 @@ namespace RpgApi.Migrations
                             Nome = "Hobbit",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -276,7 +276,7 @@ namespace RpgApi.Migrations
                             Nome = "Celeborn",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         },
                         new
                         {
@@ -290,7 +290,7 @@ namespace RpgApi.Migrations
                             Nome = "Radagast",
                             PontosVida = 100,
                             UsuarioId = 1,
-                            Vitorias = 0
+                            Vitórias = 0
                         });
                 });
 
@@ -369,7 +369,7 @@ namespace RpgApi.Migrations
 
                     b.Property<string>("Email")
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.Property<byte[]>("Foto")
                         .HasColumnType("varbinary(max)");
@@ -390,13 +390,13 @@ namespace RpgApi.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar")
+                        .HasColumnType("varchar")
                         .HasDefaultValue("Jogador");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VarChar");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -409,8 +409,8 @@ namespace RpgApi.Migrations
                             Email = "seuEmail@gmail.com",
                             Latitude = -23.520024100000001,
                             Longitude = -46.596497999999997,
-                            PasswordHash = new byte[] { 215, 164, 67, 183, 149, 0, 69, 237, 188, 227, 93, 114, 231, 73, 150, 113, 229, 124, 91, 101, 67, 188, 225, 140, 223, 42, 186, 17, 37, 213, 228, 130, 33, 10, 220, 60, 69, 116, 117, 194, 178, 61, 122, 99, 33, 191, 112, 152, 158, 201, 165, 147, 182, 170, 218, 53, 203, 25, 9, 197, 160, 37, 220, 60 },
-                            PasswordSalt = new byte[] { 72, 55, 68, 88, 196, 4, 152, 236, 87, 211, 186, 128, 122, 92, 212, 48, 135, 28, 84, 155, 12, 157, 75, 131, 253, 18, 214, 45, 96, 221, 117, 253, 250, 252, 110, 162, 215, 74, 46, 154, 130, 20, 107, 239, 32, 16, 135, 193, 53, 33, 49, 62, 38, 106, 26, 173, 167, 145, 120, 202, 231, 217, 191, 37, 248, 239, 25, 183, 182, 214, 244, 104, 166, 209, 204, 123, 243, 4, 209, 215, 172, 13, 201, 24, 185, 119, 99, 154, 18, 178, 43, 172, 241, 52, 230, 2, 126, 172, 13, 94, 163, 61, 86, 12, 15, 63, 201, 165, 213, 138, 189, 64, 16, 19, 73, 62, 237, 208, 228, 179, 16, 86, 205, 34, 32, 15, 23, 95 },
+                            PasswordHash = new byte[] { 62, 20, 250, 244, 216, 225, 140, 47, 5, 28, 228, 18, 132, 28, 131, 84, 30, 187, 221, 7, 127, 209, 101, 226, 164, 164, 135, 10, 18, 128, 211, 115, 142, 208, 253, 28, 242, 226, 165, 145, 140, 47, 113, 212, 247, 68, 180, 113, 198, 0, 72, 152, 34, 164, 0, 235, 22, 7, 15, 246, 235, 183, 6, 133 },
+                            PasswordSalt = new byte[] { 158, 207, 222, 37, 229, 16, 160, 26, 48, 199, 186, 80, 66, 225, 34, 94, 243, 62, 229, 44, 163, 255, 39, 76, 36, 181, 50, 21, 136, 232, 192, 154, 22, 73, 169, 115, 160, 154, 225, 205, 12, 42, 153, 95, 168, 195, 118, 96, 214, 2, 107, 8, 142, 81, 160, 227, 155, 34, 172, 170, 245, 56, 85, 118, 184, 234, 198, 129, 94, 177, 10, 226, 131, 24, 140, 133, 36, 16, 92, 168, 52, 114, 98, 66, 19, 237, 137, 50, 95, 100, 112, 188, 19, 73, 160, 201, 47, 44, 134, 197, 16, 82, 152, 84, 90, 43, 118, 104, 249, 157, 178, 239, 181, 30, 43, 123, 206, 229, 252, 45, 216, 62, 141, 166, 90, 132, 59, 0 },
                             Perfil = "Admin",
                             Username = "UsuarioAdmin"
                         });
@@ -445,7 +445,7 @@ namespace RpgApi.Migrations
                         .IsRequired();
 
                     b.HasOne("RpgApi.Models.Personagem", "Personagem")
-                        .WithMany("PersonagemHabilidades")
+                        .WithMany()
                         .HasForeignKey("PersonagemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -463,8 +463,6 @@ namespace RpgApi.Migrations
             modelBuilder.Entity("RpgApi.Models.Personagem", b =>
                 {
                     b.Navigation("Arma");
-
-                    b.Navigation("PersonagemHabilidades");
                 });
 
             modelBuilder.Entity("RpgApi.Models.Usuario", b =>

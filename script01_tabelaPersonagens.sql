@@ -13,7 +13,7 @@ GO
 
 CREATE TABLE [TB_PERSONAGENS] (
     [Id] int NOT NULL IDENTITY,
-    [Nome] VarChar(200) NOT NULL,
+    [Nome] varchar(200) NOT NULL,
     [PontosVida] int NOT NULL,
     [Forca] int NOT NULL,
     [Defesa] int NOT NULL,
@@ -38,7 +38,7 @@ IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Clas
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20240905004154_InitialCreate', N'8.0.8');
+VALUES (N'20240905004156_InitialCreate', N'8.0.8');
 GO
 
 COMMIT;
